@@ -1,0 +1,34 @@
+<!doctype html>
+<html ng-app="github-widget">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="styles/bootstrap.css">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <div class="container-fluid">
+    <ng-view></ng-view>
+  </div>
+
+  <script type="text/ng-template" id="github-widget-template.html">
+    <table class="table">
+      <tr ng-repeat="group in data">
+        <td>{{group.name}}</td>
+      </tr>
+    </table>
+    <div>Hello</div>
+  </script>
+  <script src="components/angular/angular.js"></script>
+  <script src="components/angular-mocks/angular-mocks.js"></script>
+
+  <!-- build:js scripts/scripts.js -->
+  <script src="scripts/app.js"></script>
+  <script src="scripts/appDev.js"></script>
+  <!-- endbuild -->
+</body>
+</html>
+
